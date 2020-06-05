@@ -1,0 +1,24 @@
+{
+	"name": "awesome9/requirements",
+	"description": "Requirements checker for WordPress.",
+	"type": "library",
+	"license": "GPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Awesome9",
+			"email": "me@awesome9.co"
+		}
+	],
+	"require": {
+		"php": ">=5.6"
+	},
+	"config": {
+		"optimize-autoloader": true
+	},
+	"autoload": {
+		"psr-4" : {
+			"Awesome9\\Requirements\\" : "src"
+		},
+		"classmap" : [ "src/" ]
+	},
+}

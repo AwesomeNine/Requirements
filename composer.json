@@ -20,5 +20,5 @@
 			"Awesome9\\Requirements\\" : "src"
 		},
 		"classmap" : [ "src/" ]
-	},
+	}
 }

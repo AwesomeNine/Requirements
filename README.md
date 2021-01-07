@@ -1,7 +1,7 @@
 # Requirements
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/92a7e59ac94546838d015572869e1b6b)](https://app.codacy.com/gh/AwesomeNine/Requirements?utm_source=github.com&utm_medium=referral&utm_content=AwesomeNine/Requirements&utm_campaign=Badge_Grade_Settings)
 [![Awesome9](https://img.shields.io/badge/Awesome-9-brightgreen)](https://awesome9.co)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/92a7e59ac94546838d015572869e1b6b)](https://app.codacy.com/gh/AwesomeNine/Requirements?utm_source=github.com&utm_medium=referral&utm_content=AwesomeNine/Requirements&utm_campaign=Badge_Grade_Settings)
 [![Latest Stable Version](https://poser.pugx.org/awesome9/requirements/v/stable)](https://packagist.org/packages/awesome9/requirements)
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/awesome9/requirements.svg)](https://packagist.org/packages/awesome9/requirements)
 [![Total Downloads](https://poser.pugx.org/awesome9/requirements/downloads)](https://packagist.org/packages/awesome9/requirements)

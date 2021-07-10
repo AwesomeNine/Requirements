@@ -21,7 +21,7 @@ abstract class Checker implements Checkable {
 	 *
 	 * @var array
 	 */
-	protected $errors = array();
+	protected $errors = [];
 
 	/**
 	 * Checks if the requirement is met

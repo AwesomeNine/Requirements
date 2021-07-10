@@ -43,8 +43,8 @@ class Plugins extends Abstracts\Checker {
 			$active_plugins_raw = array_merge( $active_plugins_raw, wp_get_active_network_plugins() );
 		}
 
-		$active_plugins          = array();
-		$active_plugins_versions = array();
+		$active_plugins          = [];
+		$active_plugins_versions = [];
 
 		foreach ( $active_plugins_raw as $plugin_full_path ) {
 			$plugin_file      = str_replace( WP_PLUGIN_DIR . '/', '', $plugin_full_path );

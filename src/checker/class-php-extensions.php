@@ -37,7 +37,7 @@ class PHP_Extensions extends Abstracts\Checker {
 			throw new \Exception( __( 'PHP Extensions Check requires array parameter', 'awesome9-requirements' ) );
 		}
 
-		$missing_extensions = array();
+		$missing_extensions = [];
 
 		foreach ( $value as $extension ) {
 			if ( ! extension_loaded( $extension ) ) {

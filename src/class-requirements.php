@@ -29,21 +29,21 @@ class Requirements {
 	 *
 	 * @var array
 	 */
-	protected $requirements = array();
+	protected $requirements = [];
 
 	/**
 	 * Checkers array
 	 *
 	 * @var array
 	 */
-	protected $checkers = array();
+	protected $checkers = [];
 
 	/**
 	 * Errors array
 	 *
 	 * @var array
 	 */
-	protected $errors = array();
+	protected $errors = [];
 
 	/**
 	 * If check has been performed
@@ -61,12 +61,12 @@ class Requirements {
 	 * @param bool   $autoload_checkers If default checkers should be autoloaded.
 	 *                                  Default: true.
 	 */
-	public function __construct( $plugin_name, $requirements = array(), $autoload_checkers = true ) {
+	public function __construct( $plugin_name, $requirements = [], $autoload_checkers = true ) {
 
 		$this->plugin_name = $plugin_name;
 
 		// Add requirements.
-		array_map( array( $this, 'add' ), array_keys( $requirements ), $requirements );
+		array_map( [ $this, 'add' ], array_keys( $requirements ), $requirements );
 
 		// Register default checkers.
 		if ( $autoload_checkers ) {
@@ -74,7 +74,7 @@ class Requirements {
 		}
 
 		// Load translation.
-		add_action( 'init', array( $this, 'load_translation' ) );
+		add_action( 'init', [ $this, 'load_translation' ] );
 	}
 
 	/**
@@ -98,14 +98,14 @@ class Requirements {
 	 */
 	private function load_default_checkers() {
 		array_map(
-			array( $this, 'register_checker' ),
-			array(
+			[ $this, 'register_checker' ],
+			[
 				Checker\PHP::class,
 				Checker\PHP_Extensions::class,
 				Checker\Plugins::class,
 				Checker\Themes::class,
 				Checker\WP::class,
-			)
+			]
 		);
 	}
 
@@ -213,12 +213,12 @@ class Requirements {
 	 */
 	public function check() {
 		// Reset state.
-		$this->errors = array();
+		$this->errors = [];
 
 		foreach ( $this->get() as $checker_name => $requirement ) {
 			if ( $this->has_checker( $checker_name ) ) {
 				$checker = $this->get_checker( $checker_name );
-				call_user_func( array( $checker, 'check' ), $requirement );
+				call_user_func( [ $checker, 'check' ], $requirement );
 				$this->errors = array_merge( $this->errors, $checker->get_errors() );
 			}
 		}
